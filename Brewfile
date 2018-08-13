@@ -1,7 +1,7 @@
 # Install command-line tools and apps using Homebrew
 # Usage: `brew bundle install`
 # Manish Parashar
-# Updated: 20171226
+# Updated: 20180805
 
 # Install location; export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 cask_args appdir: "/Applications"
@@ -12,6 +12,7 @@ tap "caskroom/fonts"
 tap "caskroom/versions"
 tap "homebrew/bundle"
 tap "homebrew/core"
+tap "buo/cask-upgrade"
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -29,7 +30,7 @@ brew "bash-completion"
 
 # git
 brew "git"
-brew "git-flow"
+#brew "git-flow"
 
 # App Store cli
 brew "mas"
@@ -39,33 +40,42 @@ brew "zsh"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
-brew "wget", args: ['enable-iri']
-brew "vim", args: ['override-system-vi']
+brew "wget"
+brew "vim"
 brew "tree"
 brew "youtube-dl"
 brew "neofetch"
 brew "tmux"
+brew "lastpass-cli"
 
 # casks
 cask "alfred"
+cask "android-file-transfer"
 cask "spectacle"
 cask "appcleaner"
-cask "cleanmymac"
+cask "malwarebytes"
 cask "coconutbattery"
 cask "firefox"
 cask "google-chrome"
+cask "1password"
+cask "dropbox"
 cask "gimp"
 cask "vlc"
 cask "iina"
 cask "iterm2"
 cask "macvim"
 cask "sublime-text"
+cask "textmate"
 cask "visual-studio-code"
-cask "dropbox"
 cask "spotify"
 cask "spotify-notifications"
+cask "itsycal"
+cask "keka"
+cask "teamviewer"
+cask "the-unarchiver"
+cask "suspicious-package"
+#cask "cleanmymac"
 #cask "slack"
-#cask "the-unarchiver"
 
 # Quicklook
 cask "qlcolorcode"
@@ -76,7 +86,6 @@ cask "qlprettypatch"
 cask "quicklook-csv"
 cask "qlimagesize"
 cask "webpquicklook"
-cask "suspicious-package"
 cask "quicklookase"
 cask "qlvideo"
 
@@ -97,8 +106,8 @@ cask "font-firamono-nerd-font"
 cask "font-menlo-for-powerline"
 
 # Install Mac App Store apps
+mas "Amphetamine", id: 937984704
+#mas "CleanMyDrive 2", id: 523620159
 #mas "Numbers", id: 409203825
 #mas "Pages", id: 409201541
-mas "The Unarchiver", id: 425424353
-mas "Amphetamine", id: 937984704
-mas "CleanMyDrive 2", id: 523620159
+#mas "The Unarchiver", id: 425424353
